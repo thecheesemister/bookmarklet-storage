@@ -1,0 +1,15 @@
+javascript:(function(){
+    var code = prompt('Enter JavaScript code to execute:');
+    if (code !== null && code !== '') {
+        setInterval(function(){
+            try {
+                var result = eval(code);
+                console.log('Execution Result:', result);
+            } catch (error) {
+                console.error('Execution Error:', error);
+            }
+        }, 500);
+    } else {
+        console.log('No code provided or cancelled.');
+    }
+})();
